@@ -56,7 +56,7 @@
 (define-public (bulk-add-eligible-participants (participant-addresses (list 200 principal)))
   (begin
     (asserts! (is-eq tx-sender CONTRACT-OWNER) ERROR-NOT-CONTRACT-OWNER)
-    (log-event "bulk-participants-add" "participants added")
+    (log-event "bulk-add" "participants added")
     (ok (map add-eligible-participant participant-addresses))))
 
 (define-public (update-reward-amount (new-amount uint))
